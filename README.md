@@ -12,7 +12,7 @@ CrofAI provider plugin for OpenCode - auth, model discovery
 Run the setup script to install everything automatically:
 
 ```bash
-bunx opencode-crof-auth setup
+bunx opencode-crof-auth
 ```
 
 This will:
