@@ -37,8 +37,11 @@ opencode plugin opencode-crof-auth -g
 
 ## Usage
 
-1. Run `opencode auth login crofai` (or /connect in OpenCode) and enter your API key (starts with `nahcrof_`)
-2. Select a CrofAI model using `/models` or set `model: crofai/xxx` in your config
+1. Run `opencode auth login` and search for "crofai" in the interactive prompt
+2. Enter your API key (starts with `nahcrof_`)
+3. Select a CrofAI model using `/models` or set `model: crofai/xxx` in your config
+
+> **Note:** Direct command `opencode auth login crofai` may not work on some OpenCode versions. Use the interactive search instead.
 ## Credits
 
 - [Nahcrof](https://github.com/nahcrof) - For creating [CrofAI](https://crof.ai)
