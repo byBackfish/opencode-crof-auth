@@ -4,6 +4,7 @@ const CROFAI_URL = "https://crof.ai"
 
 const auth: AuthHook = {
   provider: "crofai",
+  name: "CrofAI",
   methods: [
     {
       type: "api",
@@ -29,6 +30,8 @@ const auth: AuthHook = {
 
 const provider: ProviderHook = {
   id: "crofai",
+  name: "CrofAI",
+  description: "CrofAI API provider",
   models: async (provider, ctx) => {
     const models: Record<string, any> = {}
 
