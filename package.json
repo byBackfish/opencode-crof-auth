@@ -1,0 +1,48 @@
+{
+  "name": "opencode-crof-auth",
+  "version": "0.2.0",
+  "description": "CrofAI authentication provider plugin for OpenCode",
+  "type": "module",
+  "main": "./dist/index.js",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "bin": {
+    "opencode-crof-auth": "./dist/scripts/setup.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "clean": "rm -rf dist && mkdir dist",
+    "build": "bun run clean && bun build src/index.ts --outdir dist --target=bun --external @opencode-ai/plugin --external @opentui/core --external @opentui/solid --external solid-js && mkdir -p dist/scripts && bun build scripts/setup.ts --outdir dist/scripts --target=bun"
+  },
+  "dependencies": {
+    "jsonc-parser": "^3.2.0"
+  },
+  "peerDependencies": {
+    "@opencode-ai/plugin": "*"
+  },
+  "peerDependenciesMeta": {
+    "@opencode-ai/plugin": { "optional": true }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/byBackfish/opencode-crof-auth.git"
+  },
+  "keywords": [
+    "opencode",
+    "opencode-plugin",
+    "crofai",
+    "provider",
+    "auth"
+  ],
+  "license": "MIT",
+  "author": "byBackfish",
+  "engines": {
+    "opencode": ">=1.4.0"
+  }
+}
