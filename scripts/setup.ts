@@ -56,9 +56,8 @@ function addCrofaiProvider(configPath) {
     const errors = []
     const config = parseJSONC(content, errors)
 
-    if (errors.length > 0) {
+    if (config === null || config === undefined) {
         console.error(`${RED}Error:${RESET} Could not parse config at ${configPath}`)
-        console.error(`  ${YELLOW}${errors[0].message}${RESET}`)
         return false
     }
 
@@ -72,9 +71,9 @@ function addCrofaiProvider(configPath) {
         ? modify(content, ["provider"], { [CROFAI_PROVIDER_ID]: {} }, { tabSize: 2 })
         : modify(content, ["provider", CROFAI_PROVIDER_ID], {}, { tabSize: 2 })
 
-    const newContent = applyEdits(content, edits)
-    const fmtEdits = format(newContent, undefined, { tabSize: 2 })
-    writeFileSync(configPath, applyEdits(newContent, fmtEdits))
+    const edited = applyEdits(content, edits)
+    const fmtEdits = format(edited, undefined, { tabSize: 2 })
+    writeFileSync(configPath, applyEdits(edited, fmtEdits))
     console.log(`${GREEN}OK:${RESET} Added crofai provider to ${configPath}`)
     return true
 }
