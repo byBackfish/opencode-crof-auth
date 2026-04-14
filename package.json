@@ -1,6 +1,6 @@
 {
   "name": "opencode-crof-auth",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "CrofAI authentication provider plugin for OpenCode",
   "type": "module",
   "main": "./dist/index.js",
@@ -27,7 +27,9 @@
     "@opencode-ai/plugin": "*"
   },
   "peerDependenciesMeta": {
-    "@opencode-ai/plugin": { "optional": true }
+    "@opencode-ai/plugin": {
+      "optional": true
+    }
   },
   "repository": {
     "type": "git",
