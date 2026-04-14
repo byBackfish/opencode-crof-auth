@@ -1,6 +1,6 @@
 {
   "name": "opencode-crof-auth",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "CrofAI authentication provider plugin for OpenCode",
   "type": "module",
   "main": "./dist/index.js",
