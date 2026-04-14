@@ -19,6 +19,20 @@ This will:
 1. Install the plugin via `opencode plugin`
 2. Add the crofai provider to your opencode.json
 
+## Direct Login
+
+You can also provide your API key directly:
+
+```bash
+bunx opencode-crof-auth nahcrof_your-api-key
+```
+
+Or specify a custom config path (any order):
+
+```bash
+bunx opencode-crof-auth /path/to/config.json nahcrof_your-api-key
+```
+
 ## Manual Installation
 
 If you prefer to do it step by step:
